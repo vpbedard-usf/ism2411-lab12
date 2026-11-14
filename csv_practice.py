@@ -23,9 +23,9 @@ with open('data/sales.csv', 'r') as file:
     header=next(reader)
     for row in reader:
         item=row[0]
-        quantity=float(row[1])
-        price=float(row[2])
-        total+=quantity*price
+        quantity=int(row[2])
+        price=float(row[1])
+        total=quantity*price
         totalrevenue+=total
         print(f"Item: {item}, Quantity: {quantity}, Price: {price}, Total: ${total:,.2f}")
 print("-" * 50)
@@ -53,3 +53,19 @@ with open(input_file, mode='r', encoding='utf-8', newline='') as infile, \
             written_count += 1
 print(f"Original data rows: {original_count}")
 print(f"Rows written (> $100): {written_count}")
+print("exercise 6")
+totalrevenue=.0
+with open('data/sales.csv', 'r') as file:
+    reader=csv.DictReader(file)
+    for row in reader:
+        item_name=row['product']
+        qty=int(row['quantity'])
+        price=float(row['price'])
+        line_total=qty*price
+        totalrevenue+=line_total
+        print(f"Item: {item_name}, Quantity: {qty}, Price: {price}, Total: ${line_total:,.2f}")
+print("-" * 50)
+print(f"Total Revenue: ${totalrevenue:,.2f}")
+#I perfer DictReader because it allows me to access the data by column names, which makes the code more readable and easier to maintain.
+#It is preferble over reader when working with CSV files that have headers, as it eliminates the need to remember the index of each column.
+print("exercise 7")
