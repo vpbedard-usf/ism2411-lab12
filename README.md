@@ -1,2 +1,11 @@
-# ism2411-lab12
-lab 12
+# ISM2411 Lab 12 — Read a Sales CSV, Write a Cleaned Report
+
+**Name:** Vincent Bedard
+
+## How to Run
+
+From this folder:
+
+```
+python3 csv_practice.py
+```
