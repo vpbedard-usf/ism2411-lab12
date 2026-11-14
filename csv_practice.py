@@ -1,5 +1,6 @@
-#1.
-#2.
+#1.In Python, you can reuse the function as many times as you want. You can also scale the function and data easily.
+#In Excel, you can easily see all of the visualizations and data in one place, which can be helpful for analysis and decision-making.
+#2.You could use an append function to add new data, like sales transactions to a composite log.
 print("exercise 2")
 import csv
 with open('data/sales.csv', 'r') as file:
